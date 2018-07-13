@@ -1,0 +1,23 @@
+{
+  "name": "seedbed-express",
+  "version": "1.0.6",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/freeart/seedbed-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freeart/seedbed-express/issues"
+  },
+  "homepage": "https://github.com/freeart/seedbed-express#readme",
+  "dependencies": {
+    "async": "^2.6.1",
+    "ftp": "^0.3.10"
+  }
+}
