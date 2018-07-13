@@ -43,7 +43,10 @@ class FTP {
 				return cb(err)
 			}
 			const orderedList = list.map((file) => {
-				return parseFilename(file.name)
+				return Object.assign(parseFilename(file.name), {
+					size: file.size,
+					date: file.date
+				})
 			}).sort((a, b) => {
 				let aSize = a.type;
 				let bSize = b.type;
@@ -69,10 +72,10 @@ class FTP {
 					}
 					stream.once('close', () => {
 						if (file.name.indexOf('-Full.xml') != -1) {
-							copiedFiles.full.push(file.name)
+							copiedFiles.full.push(file)
 						}
 						if (file.name.indexOf('-Incremental.xml') != -1) {
-							copiedFiles.incremental.push(file.name)
+							copiedFiles.incremental.push(file)
 						}
 						cb(null)
 					})
