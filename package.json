@@ -1,6 +1,6 @@
 {
-  "name": "seedbed-express",
-  "version": "1.0.6",
+  "name": "seedbed-ftp",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/freeart/seedbed-express.git"
+    "url": "git+ssh://git@github.com/freeart/seedbed-ftp.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/freeart/seedbed-express/issues"
+    "url": "https://github.com/freeart/seedbed-ftp/issues"
   },
-  "homepage": "https://github.com/freeart/seedbed-express#readme",
+  "homepage": "https://github.com/freeart/seedbed-ftp#readme",
   "dependencies": {
     "async": "^2.6.1",
     "ftp": "^0.3.10"
