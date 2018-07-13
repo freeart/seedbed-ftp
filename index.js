@@ -60,7 +60,7 @@ class FTP {
 				incremental: []
 			}
 			async.eachLimit(orderedList, 1, (file, cb) => {
-				if (fs.existsSync(path.join(__dirname, 'public', file.name))) {
+				if (fs.existsSync(path.join('.', 'public', file.name))) {
 					return setImmediate(cb)
 				}
 				this.client.get(`${this.classifier}/` + file.name, (err, stream) => {
