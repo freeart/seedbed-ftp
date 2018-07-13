@@ -60,7 +60,7 @@ class FTP {
 				incremental: []
 			}
 			async.eachLimit(orderedList, 1, (file, cb) => {
-				if (fs.existsSync(path.join(path.format(process.env.NODE_PATH), 'public', file.name))) {
+				if (fs.existsSync(path.join(__dirname, 'public', file.name))) {
 					return setImmediate(cb)
 				}
 				this.client.get(`${this.classifier}/` + file.name, (err, stream) => {
@@ -76,7 +76,7 @@ class FTP {
 						}
 						cb(null)
 					})
-					stream.pipe(fs.createWriteStream(path.join(path.format(process.env.NODE_PATH), 'public', file.name)));
+					stream.pipe(fs.createWriteStream(path.join('.', 'public', file.name)));
 				});
 			}, (err) => {
 				this.client.end()
